@@ -11805,7 +11805,7 @@ return FUNC;
 })();
 l735;
 var l737=internals.intern('LISP-IMPLEMENTATION-VERSION','COMMON-LISP');
-var l738=internals.make_lisp_string('0.5.1');
+var l738=internals.make_lisp_string('0.6.0');
 l737.fvalue=(function(){var FUNC=(function JSCL_USER_LISPIMPLEMENTATIONVERSION(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v3321=this;
 return (function(){return l738;
