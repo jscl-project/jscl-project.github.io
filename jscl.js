@@ -21359,7 +21359,7 @@ return FUNC;
 })();
 l1582;
 var l1584=internals.intern('LISP-IMPLEMENTATION-VERSION','COMMON-LISP');
-var l1585=internals.make_lisp_string('');
+var l1585=internals.make_lisp_string('d291da4');
 l1584.fvalue=(function(){var FUNC=(function JSCL_USER_LISPIMPLEMENTATIONVERSION(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v6453=this;
 return (function(){return l1585;
