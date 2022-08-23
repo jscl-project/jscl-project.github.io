@@ -226,6 +226,7 @@ internals.safe_char_downcase = function(x) {
 };
 
 internals.xstring = function(x){
+  if(typeof x === "number") return x.toString();
   const hasFillPointer = typeof x.fillpointer === 'number'
   const activechars = hasFillPointer? x.slice(0, x.fillpointer): x
   return activechars.join('');
@@ -30276,7 +30277,7 @@ return FUNC;
 })();
 l2381;
 var l2383=internals.intern('LISP-IMPLEMENTATION-VERSION','COMMON-LISP');
-var l2384=internals.make_lisp_string('ffccdb1');
+var l2384=internals.make_lisp_string('29885f7');
 l2383.fvalue=(function(){var FUNC=(function JSCL_USER_LISPIMPLEMENTATIONVERSION(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v9782=this;
 return (function(){return l2384;
@@ -45853,7 +45854,7 @@ var l4189=internals.QIList(l182,l181,l183,l3782,l180,l178,l179,l263,l297,l3776,l
 l809.fvalue(internals.pv,l4189);
 l797.value=internals.symbolValue(l792);
 var l4190=internals.intern('COMPILATION-NOTICE');
-var l4191=internals.make_lisp_string('built on 29 March 2022');
+var l4191=internals.make_lisp_string('built on 23 August 2022');
 l4190.fvalue=(function(){var FUNC=(function JSCL_USER_COMPILATIONNOTICE(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v15462=this;
 return (function(){return l4191;
