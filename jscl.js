@@ -31093,7 +31093,7 @@ return FUNC;
 })();
 l2427;
 var l2429=internals.intern('LISP-IMPLEMENTATION-VERSION','COMMON-LISP');
-var l2430=internals.make_lisp_string('3a3c907');
+var l2430=internals.make_lisp_string('0c21063');
 l2429.fvalue=(function(){var FUNC=(function JSCL_USER_LISPIMPLEMENTATIONVERSION(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v9977=this;
 return (function(){return l2430;
@@ -46725,7 +46725,7 @@ var l4232=internals.QIList(l183,l182,l184,l3833,l181,l179,l180,l264,l298,l3827,l
 l826.fvalue(internals.pv,l4232);
 l814.value=internals.symbolValue(l809);
 var l4233=internals.intern('COMPILATION-NOTICE');
-var l4234=internals.make_lisp_string('built on 10 September 2022');
+var l4234=internals.make_lisp_string('built on 10 October 2022');
 l4233.fvalue=(function(){var FUNC=(function JSCL_USER_COMPILATIONNOTICE(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v15671=this;
 return (function(){return l4234;
