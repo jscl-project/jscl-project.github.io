@@ -31860,7 +31860,7 @@ return FUNC;
 })();
 l2474;
 var l2476=internals.intern('LISP-IMPLEMENTATION-VERSION','COMMON-LISP');
-var l2477=internals.make_lisp_string('a53854f');
+var l2477=internals.make_lisp_string('5bf4ecc');
 l2476.fvalue=(function(){var FUNC=(function JSCL_USER_LISPIMPLEMENTATIONVERSION(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v10400=this;
 return (function(){return l2477;
@@ -47795,7 +47795,7 @@ var l4282=internals.QIList(l191,l190,l192,l3910,l189,l187,l188,l272,l305,l3904,l
 l850.fvalue(internals.pv,l4282);
 l836.value=internals.symbolValue(l831);
 var l4283=internals.intern('COMPILATION-NOTICE');
-var l4284=internals.make_lisp_string('built on 14 November 2025');
+var l4284=internals.make_lisp_string('built on 15 November 2025');
 l4283.fvalue=(function(){var FUNC=(function JSCL_USER_COMPILATIONNOTICE(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v16262=this;
 return (function(){return l4284;
