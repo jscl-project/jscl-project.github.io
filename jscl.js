@@ -33225,7 +33225,7 @@ return FUNC;
 })();
 l2553;
 var l2555=internals.intern('LISP-IMPLEMENTATION-VERSION','COMMON-LISP');
-var l2556=internals.make_lisp_string('5e6111b');
+var l2556=internals.make_lisp_string('4a864e5');
 l2555.fvalue=(function(){var FUNC=(function JSCL_USER_LISPIMPLEMENTATIONVERSION(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v10885=this;
 return (function(){return l2556;
