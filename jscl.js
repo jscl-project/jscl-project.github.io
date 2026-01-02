@@ -52,19 +52,17 @@ internals.pv = function(x) {
   return x==undefined? nil: x;
 };
 
-internals.mv = function(){
-  var r = [].slice.call(arguments);
-  r['multiple-value'] = true;
-  return r;
+internals.mv = function(...args){
+  args['multiple-value'] = true;
+  return args;
 };
 
 internals.forcemv = function(x) {
   return typeof x == 'object' && x !== null && 'multiple-value' in x? x: internals.mv(x);
 };
 
-internals.error = function(){
-  var args = Array.prototype.slice.call(arguments);
-  errorSym.fvalue.apply(null, [internals.pv].concat(args));
+internals.error = function(...args){
+  errorSym.fvalue(internals.pv, ...args);
 }
 
 internals.typeError = function (datum, expectedType) {
@@ -84,10 +82,9 @@ internals.typeError = function (datum, expectedType) {
 // #j:Date) will be converted into a Lisp function. We track the
 // original function in the jscl_original property as we can't wrap
 // the primitive constructor in a Lisp function or it will not work.
-internals.newInstance = function(values, ct){
-  var args = Array.prototype.slice.call(arguments);
-  var newCt = ct.bind.apply(ct.jscl_original || ct, args.slice(1));
-  return new newCt();
+internals.newInstance = function(values, ct, ...args){
+  var newCt = ct.bind.bind(ct.jscl_original || ct)(ct);
+  return new newCt(...args);
 };
 
 // Workaround the problem with send NULL for async XHR
@@ -250,11 +247,10 @@ internals.lisp_to_js = function (x) {
     if("jscl_original" in x) {
         return x.jscl_original
     } else {
-        return( function(){
-            var args = Array.prototype.slice.call(arguments);
+        return( function(...args){
             for (var i in args)
                 args[i] = internals.js_to_lisp(args[i]);
-            return internals.lisp_to_js(x.apply(this, [internals.pv].concat(args)));
+          return internals.lisp_to_js(x.bind(this)(internals.pv, ...args));
         });
     }
   }
@@ -270,11 +266,10 @@ internals.js_to_lisp = function (x) {
     return nil;
   else if (typeof x == 'function'){
     // Trampoline calling the JS function
-    var trampoline = function(values){
-      var args = Array.prototype.slice.call(arguments, 1);
+    var trampoline = function(values, ...args){
       for (var i in args)
         args[i] = internals.lisp_to_js(args[i]);
-      return values(internals.js_to_lisp(x.apply(this, args)));
+      return values(internals.js_to_lisp(x.bind(this)(...args)));
     };
     trampoline.jscl_original = x;
     return trampoline;
@@ -27941,7 +27936,7 @@ return FUNC;
 })();
 l2308;
 var l2310=internals.intern('LISP-IMPLEMENTATION-VERSION','COMMON-LISP');
-var l2311=internals.make_lisp_string('7152030');
+var l2311=internals.make_lisp_string('b21fe6a');
 l2310.fvalue=(function(){var FUNC=(function JSCL_USER_LISPIMPLEMENTATIONVERSION(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v8542=this;
 return (function(){return l2311;
@@ -65270,7 +65265,7 @@ return (function(v21316){return l118.fvalue(values,l2911,l8443,l118.fvalue(inter
 }));
 l1301.value=internals.symbolValue(l1386);
 var l8444=internals.intern('COMPILATION-NOTICE');
-var l8445=internals.make_lisp_string('built on 31 December 2025');
+var l8445=internals.make_lisp_string('built on 2 January 2026');
 l8444.fvalue=(function(){var FUNC=(function JSCL_USER_COMPILATIONNOTICE(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v21317=this;
 return (function(){return l8445;
