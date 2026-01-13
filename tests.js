@@ -1,7 +1,7 @@
+if (typeof importScripts !== 'undefined') importScripts('jscl.js');
 (function(jscl){
 'use strict';
-(function(values, internals){
-var l1=internals.intern('*TOTAL-TESTS*','JSCL');
+(function(values, internals){var l1=internals.intern('*TOTAL-TESTS*','JSCL');
 l1.value=0;
 l1;
 var l2=internals.intern('*PASSED-TESTS*','JSCL');
@@ -44205,4 +44205,5 @@ return TMP===undefined?l6.value:TMP;
 })())!==l6.value) internals.js_to_lisp(internals.symbolValue(l3300)['process']['exit'](internals.lisp_to_js(internals.symbolValue(l3))));
  else l6.value;
 })(jscl.internals.pv, jscl.internals);
-})( typeof require !== 'undefined'? require('./jscl'): window.jscl )
+})( typeof require !== 'undefined'? require('./jscl'):
+typeof window !== 'undefined'? window.jscl: self.jscl )

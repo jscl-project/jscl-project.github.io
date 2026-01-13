@@ -1,7 +1,7 @@
+if (typeof importScripts !== 'undefined') importScripts('jscl.js');
 (function(jscl){
 'use strict';
-(function(values, internals){
-var l1=internals.make_lisp_string('loading repl-web/repl.lisp!');
+(function(values, internals){var l1=internals.make_lisp_string('loading repl-web/repl.lisp!');
 console.log(internals.xstring(l1));
 var l2=internals.intern('%WRITE-STRING','JSCL');
 var l3=internals.intern('T');
@@ -331,4 +331,5 @@ return FUNC;
 l62;
 l62.fvalue(internals.pv);
 })(jscl.internals.pv, jscl.internals);
-})( typeof require !== 'undefined'? require('./jscl'): window.jscl )
+})( typeof require !== 'undefined'? require('./jscl'):
+typeof window !== 'undefined'? window.jscl: self.jscl )
