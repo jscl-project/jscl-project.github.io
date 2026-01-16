@@ -1,4 +1,4 @@
-if (typeof importScripts !== 'undefined') importScripts('jscl.js');
+if (typeof importScripts !== 'undefined') importScripts('./jscl.js');
 (function(jscl){
 'use strict';
 (function(values, internals){var l1=internals.make_lisp_string('loading repl-web/repl.lisp!');
