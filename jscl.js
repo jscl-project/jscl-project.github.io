@@ -60158,7 +60158,7 @@ var l8422=internals.QIList(l83,l53,l6718,l442,l443,l2692,l283,l299,l274,l444,l44
 l1440.fvalue(internals.pv,l8422,l6101);
 l1376.value=internals.symbolValue(l1464);
 var l8423=internals.intern('COMPILATION-NOTICE','JSCL');
-var l8424=internals.make_lisp_string('built on 26 January 2026');
+var l8424=internals.make_lisp_string('built on 27 January 2026');
 l8423.fvalue=(function(){var FUNC=(function JSCL_USER_COMPILATIONNOTICE(values){internals.checkArgsAtMost(arguments.length-1,0);
 var v18873=this;
 return (function(){return l8424;
