@@ -59862,7 +59862,7 @@ return v18902;
 })(l211.fvalue(l8423,l3));
 l1367.value=internals.symbolValue(l1458);
 var l8452=internals.intern('COMPILATION-NOTICE','JSCL');
-var l8453=internals.make_lisp_string('built on 4 February 2026');
+var l8453=internals.make_lisp_string('built on 5 February 2026');
 l8452.fvalue=(function(){var FUNC=(function JSCL_USER_COMPILATIONNOTICE(){internals.checkArgsAtMost(arguments.length,0);
 var v18916=this;
 return (function(){return l8453;
