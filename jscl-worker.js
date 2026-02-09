@@ -310,7 +310,7 @@ return (('timeout' in v83?l18.value:l9.value)!==l9.value?v83['timeout']:l9.value
 }));
 throw new internals.BlockNLX(v60,_R.result,_R.mv,'NIL');
 })();
-})():l27.fvalue(l56);
+})():internals.mvcall(l27.fvalue,l56);
 })(internals.newInstance(internals.symbolValue(l12)['XMLHttpRequest']),{});
 return l9.value;
 })();
