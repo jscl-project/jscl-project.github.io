@@ -1364,7 +1364,7 @@ return FUNC;
 })();
 l147;
 var l158=internals.intern('*GIT-COMMIT-HASH*');
-var l159=internals.make_lisp_string('848e6fce7cc460504a74318c08751a6ef9bac304');
+var l159=internals.make_lisp_string('54c88494e9f8f22e4c24c666e84aab7053f18cee');
 if ((l158.value!==internals.UNBOUND?l2.value:l3.value)!==l3.value) l3.value;
  else l158.value=l159;
 l158;
