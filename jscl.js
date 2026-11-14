@@ -585,10 +585,9 @@ if (typeof window !== "undefined" && window && window.addEventListener) {
 function runCommonLispScripts() {
   var documentScripts = document.getElementsByTagName("script");
   var scripts = [];
-  var script;
 
   var progressivelyRunScripts = function () {
-    var script, i;
+    let script, i;
 
     for (i = 0; i < scripts.length; i++) {
       script = scripts[i];
@@ -626,7 +625,7 @@ function runCommonLispScripts() {
     }
 
     if ("src" in documentScripts[i] && documentScripts[i].src.length != 0) {
-      script = {
+      let script = {
         executed: false,
         error: false,
         text: null,
@@ -1365,7 +1364,7 @@ return FUNC;
 })();
 l147;
 var l158=internals.intern('*GIT-COMMIT-HASH*');
-var l159=internals.make_lisp_string('5ee3ab64bff5ad6d156d076b846bc48cc75f943d');
+var l159=internals.make_lisp_string('848e6fce7cc460504a74318c08751a6ef9bac304');
 if ((l158.value!==internals.UNBOUND?l2.value:l3.value)!==l3.value) l3.value;
  else l158.value=l159;
 l158;
@@ -60430,7 +60429,7 @@ return v19189;
 })(l220.fvalue(l8365,l3));
 l1364.value=internals.symbolValue(l1452);
 var l8395=internals.intern('COMPILATION-NOTICE');
-var l8396=internals.make_lisp_string('built on 7 November 2026');
+var l8396=internals.make_lisp_string('built on 14 November 2026');
 l8395.fvalue=(function(){var FUNC=(function JSCL_USER_COMPILATIONNOTICE(){internals.checkArgsAtMost(arguments.length,0);
 var v19203=this;
 return (function(){return internals.values1(l8396);
